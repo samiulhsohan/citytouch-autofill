@@ -1,0 +1,17 @@
+{
+  "name": "Citytouch Password Autofill",
+  "description": "It autofills your password in citytouch login page.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab", "storage", "scripting", "tabs"],
+  "action": {
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.citytouch.com.bd/*"],
+      "js": ["src/content.js"],
+      "css": ["src/styles/content.css"]
+    }
+  ]
+}

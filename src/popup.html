@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/output.css" rel="stylesheet" />
+    <script src="popup.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="w-80">
+      <div id="homePage">
+        <header class="flex justify-between p-4 items-center bg-slate-100">
+          <h1 class="text-lg font-medium">Passwords</h1>
+          <button id="addNewButton" class="button button-sm">Add new</button>
+        </header>
+
+        <div class="mt-1">
+          <ul class="passwords" id="passwordList">
+            <li>
+              <p>samiulhsohan</p>
+              <button>
+                <i icon-name="trash-2" class="h-5 w-5"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="addNewPage" class="p-4 hidden">
+        <div class="flex items-center gap-2">
+          <button class="p-1" id="goBackToHomeButton">
+            <i icon-name="chevron-left"></i>
+          </button>
+          <h1 class="text-lg font-medium">Add new</h1>
+        </div>
+
+        <form id="addNewForm" class="mt-4 space-y-4">
+          <div>
+            <label class="cta-label" for="userId">User ID</label>
+            <input
+              class="cta-input"
+              type="text"
+              name="userId"
+              id="userId"
+              required
+            />
+          </div>
+          <div>
+            <label class="cta-label" for="password">Password</label>
+            <input
+              class="cta-input"
+              type="password"
+              name="password"
+              id="password"
+              required
+            />
+          </div>
+          <button class="button w-full">Add</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/lucide.min.js"></script>
+  </body>
+</html>
